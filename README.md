@@ -9,3 +9,7 @@ pnpm add palm-editor --filter app
 pnpm add palm-util --filter app
 pnpm add @tauri-apps/plugin-sqlite --filter app
 ```
+
+## 项目图片
+
+![pm-01](docs/assets/pm-01.png)
