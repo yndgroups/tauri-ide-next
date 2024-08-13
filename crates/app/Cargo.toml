@@ -1,0 +1,41 @@
+[package]
+name = "tarui-ide"
+version = "0.0.1"
+description = "A Tauri App"
+authors = ["yangdaqiong"]
+edition = "2021"
+
+# 查看更多关键及其定义，请访问 https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "palm_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { workspace = true , features = [] }
+
+[dependencies]
+tauri = { workspace = true, features = ["devtools", "unstable"] }
+serde_json = { workspace = true }
+tauri-plugin-shell = { workspace = true }
+tauri-plugin-fs = { workspace = true }
+tauri-plugin-os = { workspace = true }
+tauri-plugin-updater = { workspace = true }
+tauri-plugin-log =  { workspace = true }
+tauri-plugin-clipboard-manager =  { workspace = true }
+tauri-plugin-dialog =  { workspace = true }
+tauri-plugin-http =  { workspace = true }
+tauri-plugin-notification =  { workspace = true }
+tauri-plugin-process =  { workspace = true }
+serde =  { workspace = true }
+
+tauri-plugin-mysql = { path = "../plugins/mysql"}
+tauri-plugin-dm = { path = "../plugins/dm"}
+tauri-plugin-sqlite = { path = "../plugins/sqlite"}
+tauri-plugin-terminal = { path = "../plugins/terminal"}
+tauri-plugin-ai = { path = "../plugins/ai"}
+tauri-plugin-redis = { path = "../plugins/redis"}
+
+[features]
+#该功能用于生产版本或“devPath”指向文件系统时
+#不要移除！！
+custom-protocol = ["tauri/custom-protocol"]

@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-test-link"
+description = "Enables the test_link command without any pre-configured scope."
+commands.allow = ["test_link"]
+
+[[permission]]
+identifier = "deny-test-link"
+description = "Denies the test_link command without any pre-configured scope."
+commands.deny = ["test_link"]

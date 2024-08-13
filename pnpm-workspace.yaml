@@ -1,0 +1,7 @@
+packages:
+  - "crates/plugins/*"
+  - "ui/plugins/*"
+  - "ui/app"
+  - "ui/ai"
+  - "ui/music"
+  - "ui/redis"

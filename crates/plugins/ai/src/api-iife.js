@@ -1,0 +1,1 @@
+if("__TAURI__"in window){var __TAURI_PLUGIN_AI__=function(_){"use strict";return"function"==typeof SuppressedError&&SuppressedError,_.sendAsk=async function(_){return await async function(_,n={},r){return window.__TAURI_INTERNALS__.invoke(_,n,r)}("plugin:ai|send_ask",{params:_})},_}({});Object.defineProperty(window.__TAURI__,"ai",{value:__TAURI_PLUGIN_AI__})}

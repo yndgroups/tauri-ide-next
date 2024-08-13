@@ -1,0 +1,49 @@
+[workspace]
+resolver="2"
+members = ["app", "common","plugins/mysql","plugins/sqlite", "plugins/terminal", "plugins/redis"]
+
+[workspace.package]
+version = "0.0.1"
+authors = ["yangdaqiong"] 
+description = "A Tauri App" 
+documentation = "https://github.com/yndgroups/tauri-ide-next"
+edition = "2021"
+rust-version = "1.60"
+license = "MIT"
+
+[workspace.dependencies]
+tauri = { version = "2.0.0-beta", features = ["devtools"] }
+tauri-build = { version = "2.0.0-beta", features = [] }
+tauri-plugin = "2.0.0-beta"
+
+tauri-plugin-shell = "2.0.0-beta"
+tauri-plugin-fs = "2.0.0-beta"
+tauri-plugin-os = "2.0.0-beta"
+tauri-plugin-updater = "2.0.0-beta"
+tauri-plugin-log =  "2.0.0-beta"
+tauri-plugin-clipboard-manager =  "2.0.0-beta"
+tauri-plugin-dialog =  "2.0.0-beta"
+tauri-plugin-http =  "2.0.0-beta"
+tauri-plugin-notification =  "2.0.0-beta"
+tauri-plugin-process =  "2.0.0-beta"
+
+# 其他依赖
+log = "0.4"
+serde_json = "1.0"
+anyhow = "1.0.76"
+thiserror = "1.0.51"
+serde = { version = "1.0.193", features = ["derive"] }
+once_cell = "1.19.0"
+
+# [target."cfg(any(target_os = \"macos\", windows, target_os = \"linux\", target_os = \"dragonfly\", target_os = \"freebsd\", target_os = \"openbsd\", target_os = \"netbsd\"))".dependencies]
+# tauri-plugin-cli = "2.0.0-beta"
+# tauri-plugin-global-shortcut = "2.0.0-beta"
+# tauri-plugin-updater = "2.0.0-beta"
+
+# [target."cfg(any(target_os = \"android\", target_os = \"ios\"))".dependencies]
+# tauri-plugin-barcode-scanner = "2.0.0-beta"
+# tauri-plugin-nfc = "2.0.0-beta"
+# tauri-plugin-biometric = "2.0.0-beta"
+
+# [target."cfg(target_os = \"windows\")".dependencies]
+# window-shadows = "0.2"

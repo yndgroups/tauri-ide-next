@@ -1,0 +1,58 @@
+@import './reset.scss';
+
+.f {
+  &l {
+    float: left;
+  }
+  &r {
+    float: right;
+  }
+}
+
+.pd {
+  &-r5 {
+    padding-right: 5px;
+  }
+  &-r10 {
+    padding-right: 10px;
+  }
+}
+
+.mg {
+  &-r5 {
+    margin-right: 5px;
+  }
+  &-r10 {
+    margin-right: 10px;
+  }
+  &-b5{
+    margin-bottom: 5px;
+  }
+}
+
+$width: 10px;
+
+@function px_to_rem($pixels,$w:$width){
+    @return $pixels * $w ;
+}
+
+.cm-editor {
+  overflow-y: auto !important;
+  height: auto !important;
+  font-family: var(--bs-font-monospace);
+  min-height: 200px;
+}
+
+.more-icon {
+  color: #fff;
+}
+
+#expansion-bridge {
+  width: calc(100vw - var(--actions-width)) !important;
+  height: calc(100vh - var(--top-header-height)) !important;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}

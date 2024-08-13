@@ -1,0 +1,43 @@
+[package]
+name = "tauri-plugin-redis"
+version = "2.0.0-beta.0"
+description = "A MySQL based database management plugin"
+authors = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+rust-version = { workspace = true }
+links = "tauri-plugin-redis"
+
+[package.metadata.docs.rs]
+rustc-args = [ "--cfg", "docsrs" ]
+rustdoc-args = [ "--cfg", "docsrs" ]
+
+[build-dependencies]
+tauri-plugin = { workspace = true, features = [ "build" ] }
+
+[dependencies]
+redis = { version = "0.25.4", features = ["tokio-comp"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tauri = { workspace = true }
+log = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+once_cell = { workspace = true }
+tokio = { version = "1", features = [ "full" ] }
+tokio-util = { version = "0.7", features = [ "full" ] }
+reqwest = { version = "0.11", default-features = false, features = [ "json", "stream" ] }
+futures-util = "0.3"
+tracing = "0.1.40"
+chrono = { version = "0.4", features = ["serde"] }
+portable-pty = "0.8.1"
+lazy_static = "1.4.0"
+rand = "0.8.5"
+
+
+common = { path = "../../common"}
+
+[features]
+native-tls = [ "reqwest/native-tls" ]
+native-tls-vendored = [ "reqwest/native-tls-vendored" ]
+rustls-tls = [ "reqwest/rustls-tls" ]

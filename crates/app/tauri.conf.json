@@ -1,0 +1,58 @@
+{
+  "productName": "tarui-ide",
+  "version": "0.1.0",
+  "identifier": "com.tauri.build",
+  "build": {
+    "beforeDevCommand": "",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "",
+    "frontendDist": "../../ui/dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "tarui-ide",
+        "width": 1024,
+        "height": 768,
+        "label": "main"
+      }
+    ],
+    "security": {
+      "assetProtocol": {
+        "enable": false,
+        "scope": ["**"]
+      }
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  },
+  "plugins": {
+    "fs": {
+      "scope": [
+        "$APPDATA/databases/*",
+        "$HOME/*",
+        "$HOME/**",
+        "$HOME/**/**",
+        "$HOME/.palm/*",
+        "$HOME/.palm/plugins/*"
+      ]
+    },
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDE5QzMxNjYwNTM5OEUwNTgKUldSWTRKaFRZQmJER1h4d1ZMYVA3dnluSjdpN2RmMldJR09hUFFlZDY0SlFqckkvRUJhZDJVZXAK",
+      "endpoints": [
+        "https://tauri-update-server.vercel.app/update/{{target}}/{{current_version}}"
+      ]
+    }
+  }
+}

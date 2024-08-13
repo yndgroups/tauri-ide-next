@@ -1,0 +1,1 @@
+if("__TAURI__"in window){var __TAURI_PLUGIN_DM__=function(n){"use strict";return"function"==typeof SuppressedError&&SuppressedError,n.link=async function(n){console.log(n,"linkInfo"),await async function(n,_={},i){return window.__TAURI_INTERNALS__.invoke(n,_,i)}("plugin:dm|link",{linkInfo:n})},n}({});Object.defineProperty(window.__TAURI__,"dm",{value:__TAURI_PLUGIN_DM__})}

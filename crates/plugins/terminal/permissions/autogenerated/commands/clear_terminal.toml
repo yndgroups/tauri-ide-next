@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-clear-terminal"
+description = "Enables the clear_terminal command without any pre-configured scope."
+commands.allow = ["clear_terminal"]
+
+[[permission]]
+identifier = "deny-clear-terminal"
+description = "Denies the clear_terminal command without any pre-configured scope."
+commands.deny = ["clear_terminal"]

@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-delete-link"
+description = "Enables the delete_link command without any pre-configured scope."
+commands.allow = ["delete_link"]
+
+[[permission]]
+identifier = "deny-delete-link"
+description = "Denies the delete_link command without any pre-configured scope."
+commands.deny = ["delete_link"]

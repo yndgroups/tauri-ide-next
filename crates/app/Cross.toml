@@ -1,0 +1,11 @@
+[build.env]
+#必须设置ICONS_VOLUME、DIST_VOLUME和ISOLATION_VOLUME环境变量
+#ICONS_VOLUME：图标文件夹的绝对路径
+#DIST_VOLUME：DIST文件夹的绝对路径
+#ISOLATION_VOLUME：隔离dist文件夹的绝对路径
+#这可以通过运行`$..来完成。setup-cross.sh`在examples/api文件夹中
+volumes = ["ICONS_VOLUME", "DIST_VOLUME", "ISOLATION_VOLUME"]
+
+[target.aarch64-unknown-linux-gnu]
+image = "aarch64-unknown-linux-gnu:latest"
+#image = "ghcr.io/tauri-apps/tauri/aarch64-unknown-linux-gnu:latest"

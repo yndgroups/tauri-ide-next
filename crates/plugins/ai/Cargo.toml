@@ -1,0 +1,40 @@
+[package]
+name = "tauri-plugin-ai"
+version = "2.0.0-beta.0"
+description = "tauri ai plugin"
+authors = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+rust-version = { workspace = true }
+links = "tauri-plugin-ai"
+
+[package.metadata.docs.rs]
+rustc-args = [ "--cfg", "docsrs" ]
+rustdoc-args = [ "--cfg", "docsrs" ]
+
+[build-dependencies]
+tauri-plugin = { workspace = true, features = [ "build" ] }
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+tauri = { workspace = true }
+log = { workspace = true }
+thiserror = { workspace = true }
+once_cell = { workspace = true }
+tokio = { version = "1", features = [ "full"] }
+tokio-util = { version = "0.7", features = [ "codec" ] }
+reqwest = { version = "0.11", default-features = false, features = [ "json", "stream", "rustls-tls", "gzip"] }
+futures-util = "0.3"
+mysql = "24.0.0"
+tracing = "0.1.40"
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0.80"
+derive_builder = "0.20.0"
+
+common = { path = "../../common"}
+
+[features]
+native-tls = [ "reqwest/native-tls" ]
+native-tls-vendored = [ "reqwest/native-tls-vendored" ]
+rustls-tls = [ "reqwest/rustls-tls" ]

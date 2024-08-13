@@ -1,0 +1,39 @@
+{
+  "name": "@tauri-apps/plugin-mysql",
+  "version": "0.1.0",
+  "description": "A MySQL based database management plugin",
+  "license": "MIT or APACHE-2.0",
+  "authors": [
+    "palm"
+  ],
+  "type": "module",
+  "types": "./dist-js/index.d.ts",
+  "main": "./dist-js/index.cjs",
+  "module": "./dist-js/index.js",
+  "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+  },
+  "scripts": {
+    "dev": "rollup -c --watch && cargo build",
+    "build": "rollup -c  && cargo build",
+    "preinstall": "rollup -c && cargo build"
+  },
+  "files": [
+    "dist-js",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@tauri-apps/api": ">=2.0.0-beta.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.12.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "tslib": "^2.6.2"
+  }
+}
