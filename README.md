@@ -1,4 +1,4 @@
-# [ynd-plam-next](https://github.com/yndgroups/tauri-ide-next)
+# [tauri-ide-next](https://github.com/yndgroups/tauri-ide-next)
 
 > 新一代的ide工具
 
