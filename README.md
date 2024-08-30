@@ -38,3 +38,5 @@ pnpm add @tauri-apps/plugin-sqlite --filter app
 
 ### 国际化
 ![ide-04](docs/assets/ide-04.png)
+
+### add docs
